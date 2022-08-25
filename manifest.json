@@ -8,9 +8,10 @@
         "default_popup": "index.html",
         "default_title": "Hangry Chef Recipe Tracker"
     },
-    "permissions": [
-        "tabs",
-        "bookmarks",
-        "unlimitedStorage"
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["main.js"]
+        }
       ]
 }

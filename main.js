@@ -7,6 +7,8 @@
 //how can I "capture" the html text of any website that I visit
 //if the words "instructions" "directions" "ingredients" exist we will auto scroll to those areas
 
+const instructions = document.documentElement.innerText.indexOf('ingredients');
+instructions.scrollIntoView({behavior: "smooth"});
 
 
 
