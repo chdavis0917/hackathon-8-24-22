@@ -7,16 +7,37 @@
 //how can I "capture" the html text of any website that I visit
 //if the words "instructions" "directions" "ingredients" exist we will auto scroll to those areas
 
+let commonIDs = ['recipe', 'ingredients', 'recipe-block_1-0', 'itr-ingredients', 'recipe-body']
 
-if (document.body.textContent.includes("Ingredients")) {
-    document.body.querySelector('#recipe').scrollIntoView({
+let commonClasses = ['recipe', 'Recipe', 'recipe-ingredients', 'Recipe_ingredientName', 'mv-create-ingredients', 'ingredients', 'tasty-recipes-ingredients', 'itr-ingredients']
+
+
+function keywordChecker() {
+
+for (let i = 0; i < commonIDs.length; i++) {
+if (document.body.contains(document.getElementById(commonIDs[i]))) {
+    let hashtag = `#${commonIDs[i]}`;
+    document.body.querySelector(hashtag).scrollIntoView({
         behavior: 'smooth'
       });
-    // const element = document.body.innerText;
-    // alert(element);
-    // document.body.innerHTML.indexOf("Instructions").scrollIntoView({behavior: "smooth"})
-    // element.scrollIntoView();
+    return;
 }
+}
+for (let i = 0; i < commonClasses.length; i++) {
+  if (document.body.contains(document.getElementsByClassName(commonClasses[i]))) {
+      let classTag = `.${commonClasses[i]}`;
+      document.body.querySelector(classTag).scrollIntoView({
+          behavior: 'smooth'
+        });
+      return;
+  }
+  }
+  if (document.body.textContent.includes("Ingredients")) document.body.scrollTo(0, 950);
+
+}
+
+keywordChecker()
+
 
 // if (document.body.textContent.includes("Directions")) {
 //     document.body.innerText.indexOf('Directions').scrollIntoView({behavior: "smooth"})
