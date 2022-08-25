@@ -2,7 +2,7 @@
     "name": "Hangry Chef",
     "version": "1.0.0",
     "description": "Skip the ads and nonsense and get cooking now!",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "author": "Brian Yang & Christopher Davis",
     "content_scripts": [
         {

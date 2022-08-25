@@ -7,13 +7,7 @@
 //how can I "capture" the html text of any website that I visit
 //if the words "instructions" "directions" "ingredients" exist we will auto scroll to those areas
 
-// const ul = document.getElementsByTagName("ul");
-// const li = document.getElementsByTagName("li");
-// if (ul.length > 0) ul.forEach(item => item.innerHTML = "I'm really hungry!!!");
-// if (li.length > 0) li.forEach(item => item.innerHTML = "I'm really hungry!!!");
-// instructions[0].scrollIntoView({behavior: "smooth"});
 
-// document.body.innerHTML = document.body.innerHTML.replace(/Ingredients/g, "I'm really hungry!!!");
 if (document.body.textContent.includes("Instructions")) {
     document.body.innerText.indexOf('Instructions').scrollIntoView({behavior: "smooth"})
 }
@@ -21,9 +15,10 @@ else if (document.body.textContent.includes("Directions")) {
     document.body.innerText.indexOf('Directions').scrollIntoView({behavior: "smooth"})
 }
 
-else if (document.body.textContent.includes("Ingredients")) {
+else {
     document.body.innerText.indexOf('Ingredients').scrollIntoView({behavior: "smooth"})
 }
+
 
 
 
