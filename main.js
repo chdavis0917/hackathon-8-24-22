@@ -8,17 +8,23 @@
 //if the words "instructions" "directions" "ingredients" exist we will auto scroll to those areas
 
 
-if (document.body.textContent.includes("Instructions")) {
-    document.body.innerText.indexOf('Instructions').scrollIntoView({behavior: "smooth"})
-}
-else if (document.body.textContent.includes("Directions")) {
-    document.body.innerText.indexOf('Directions').scrollIntoView({behavior: "smooth"})
+if (document.body.textContent.includes("Ingredients")) {
+    document.body.querySelector('#recipe').scrollIntoView({
+        behavior: 'smooth'
+      });
+    // const element = document.body.innerText;
+    // alert(element);
+    // document.body.innerHTML.indexOf("Instructions").scrollIntoView({behavior: "smooth"})
+    // element.scrollIntoView();
 }
 
-else {
-    document.body.innerText.indexOf('Ingredients').scrollIntoView({behavior: "smooth"})
-}
+// if (document.body.textContent.includes("Directions")) {
+//     document.body.innerText.indexOf('Directions').scrollIntoView({behavior: "smooth"})
+// }
 
+// if (document.body.textContent.includes("Ingredients")) {
+//     document.body.innerText.indexOf('Ingredients').scrollIntoView({behavior: "smooth"})
+// }
 
 
 
